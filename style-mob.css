@@ -1,0 +1,306 @@
+/* --- Mobile Adjustments --- */
+.header__container {
+    height: 70px;
+}
+
+.header__nav, 
+.header__cta {
+    display: none;
+}
+
+.nav__toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+.header__mobile-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+}
+
+.mobile-nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mobile-nav__link {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+/* --- Hero Mobile --- */
+.hero {
+    padding: 1rem 0;
+}
+
+.hero__wrapper {
+    height: 70vh;
+    min-height: 500px;
+}
+
+.hero__content {
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 2rem;
+}
+
+.hero__description {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.hero__actions {
+    width: 100%;
+}
+/* --- Features Mobile --- */
+.features__title {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.features__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.feature-card {
+    padding: 2rem 1rem;
+}
+
+.feature-card__title {
+    font-size: 1.1rem;
+}
+
+.feature-card__text {
+    font-size: 0.85rem;
+}
+/* --- Stats Mobile --- */
+.stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 1rem;
+}
+
+.stat-item__number {
+    font-size: 2.2rem;
+}
+
+.stat-item__label {
+    font-size: 0.85rem;
+}
+/* --- Scrolling Text Mobile --- */
+.scrolling-text {
+    padding: 1.5rem 0;
+}
+
+.marquee-content span {
+    font-size: 1.8rem;
+    padding: 0 1.2rem;
+}
+
+.marquee-track {
+    animation-duration: 20s; /* Slightly faster on mobile */
+}
+
+/* --- Services Slider Mobile Fixes --- */
+    .services-slider {
+        padding: 4rem 0;
+    }
+
+    .section-header__title {
+        font-size: 2.2rem;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .services-slider__cta {
+        margin-top: 2.5rem;
+    }
+
+    .services-wrapper {
+        padding: 0; /* Remove lateral padding since arrows are hidden */
+    }
+
+    .services-wrapper .swiper-button-next,
+    .services-wrapper .swiper-button-prev {
+        display: none; /* Hide arrows, rely on touch swipe */
+    }
+
+    .service-card__content {
+        padding: 1.5rem 1rem;
+    }
+
+    .service-card__title {
+        font-size: 1.2rem;
+    }
+/* --- Testimonials Mobile --- */
+    .testimonials {
+        padding: 4rem 0;
+    }
+
+    .testimonials__title {
+        font-size: 2.2rem;
+    }
+
+    .testimonials__desc {
+        font-size: 0.95rem;
+    }
+
+    .testimonials__header {
+        margin-bottom: 2.5rem;
+    }
+
+    .testimonial-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Swiper Fade adjustments */
+    .testimonials-swiper {
+        padding-bottom: 1rem;
+    }
+/* --- Footer Mobile --- */
+    .footer__container {
+        padding-top: 4rem;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center; 
+    }
+
+    .footer__logo {
+        margin: 0 auto 1.5rem auto; 
+    }
+
+    .footer__heading::after {
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+
+    .footer__list {
+        align-items: center; 
+    }
+
+    .footer__list a, 
+    .footer__location {
+        justify-content: center; 
+        text-align: center;
+    }
+
+    /* --- Services Page Mobile --- */
+
+
+    .services-page {
+        padding: 6rem 0 4rem 0;
+    }
+
+    .services-page__title {
+        font-size: 2.5rem;
+    }
+
+    .services-page__desc {
+        font-size: 1rem;
+    }
+
+    .services-page__grid {
+        grid-template-columns: 1fr; /* 1 card on mobile */
+        gap: 2rem;
+    }
+
+
+
+    /* --- Contact Page Mobile --- */
+    .contact-page {
+        padding: 6rem 0 4rem 0;
+    }
+
+    .contact-page__title {
+        font-size: 2.5rem;
+    }
+
+    .contact-form__wrapper {
+        padding: 2rem 1.5rem; /* Less padding on mobile */
+    }
+
+    /* Stack grid rows on top of each other */
+    .contact-form__row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem; /* Keeps spacing consistent when stacked */
+    }
+
+    /* Hide the empty div we used for the zip code row */
+    .contact-form__row .contact-form__group:empty {
+        display: none;
+    }
+
+
+
+    /* --- Privacy Policy Mobile --- */
+    .privacy-page {
+        padding: 6rem 0 4rem 0;
+    }
+
+    .privacy-page__title {
+        font-size: 2.5rem;
+    }
+
+    .privacy-page__content {
+        padding: 2rem 1.5rem; /* Less padding on mobile */
+    }
+
+    .privacy-block h2 {
+        font-size: 1.15rem;
+    }
+
+    .privacy-block p, 
+    .privacy-block li {
+        font-size: 0.95rem;
+    }
+
+    .privacy-block--legal {
+        padding: 1.5rem;
+    }
+
+
+
+
+    .about-page { padding: 6rem 0 4rem 0; }
+    .about-page__header { margin-bottom: 2.5rem; }
+    .about-page__top-title { font-size: 2.5rem; }
+    .about-page__content { margin-bottom: 3rem; }
+    .about-page__intro { font-size: 1.05rem; margin-bottom: 2.5rem; }
+    .about-page__title { font-size: 2.1rem; margin-bottom: 1.5rem; }
+    .about-page__desc { font-size: 1rem; }
+    .about-page__image-wrapper, .about-page__image { border-radius: 12px; }
+
+
+
+
+
+
+
+    /* --- Coming Soon (Portfolio placeholder) Mobile --- */
+    .coming-soon { padding: 6rem 0 4rem 0; }
+    .coming-soon__title { font-size: 2.2rem; }
+    .coming-soon__desc { font-size: 1rem; }

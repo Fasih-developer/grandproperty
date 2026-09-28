@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grand Property Maintenance delivers trusted, professional property upkeep and repair services. Reach out for dependable, top-quality care.">
+    <meta name="keywords" content="Property Maintenance, Grand Property Maintenance, Handyman Services, Premium Property Care">
+    <title>Grand Property Maintenance | Contact Form</title>
+    <link rel="shortcut icon" href="/media/fav_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mob.css" media="screen and (max-width: 768px)">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header__container">
+            <!-- Logo -->
+            <a href="/" class="header__logo" aria-label="Grand Property Maintenance Home">
+                <img src="./media/head_logo.png" alt="Grand Property Maintenance Logo" loading="lazy">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="header__nav" aria-label="Primary Navigation">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="./services.html" class="nav__link">Services</a></li>
+                    <li><a href="./porfolio.html" class="nav__link">Portfolio</a></li>
+                    <li><a href="./aboutus.html" class="nav__link">About Us</a></li>
+                    <li><a href="./contact.html" class="nav__link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Group -->
+            <div class="header__actions">
+                <a href="tel:xxxxxxxxxxx" class="action__phone" aria-label="Call Us Now">
+                    <i class="ri-phone-fill"></i>
+                </a>
+                <a href="/contact.html" class="btn btn--primary header__cta">Request Quote</a>
+
+                <!-- Mobile Toggle -->
+                <button class="nav__toggle" id="menu-open" aria-label="Open Menu">
+                    <i class="ri-menu-3-line"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="header__mobile-menu" id="mobile-menu">
+            <button class="menu__close" id="menu-close" aria-label="Close Menu">
+                <i class="ri-close-line"></i>
+            </button>
+            <ul class="mobile-nav__list">
+                <li><a href="/" class="mobile-nav__link">Home</a></li>
+                <li><a href="/services.html" class="mobile-nav__link">Services</a></li>
+                <li><a href="/porfolio.html" class="mobile-nav__link">Portfolio</a></li>
+                <li><a href="/aboutus.html" class="mobile-nav__link">About Us</a></li>
+                <li><a href="/contact.html" class="mobile-nav__link">Contact Us</a></li>
+                <li><a href="/contact.html" class="btn btn--primary">Request Quote</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Contact Page Section -->
+    <section class="contact-page section">
+        <div class="container contact-page__container">
+
+            <!-- Header -->
+            <div class="contact-page__header">
+                <h1 class="contact-page__title">CONTACT <span>US</span></h1>
+                <p class="contact-page__desc">
+                    Get in touch with our team. We're here to help you protect and elevate your property, stress-free.
+                </p>
+                <div class="contact-page__line"></div>
+            </div>
+
+            <!-- Form Wrapper -->
+            <div class="contact-form__wrapper">
+                <!-- Dummy Form (Ready for Formspree connection later) -->
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                          <input type="hidden" name="access_key" value="b4ea3e29-c89a-4c7c-93de-fd60a638f380">
+                    <!-- Row 1: Names -->
+                    <div class="contact-form__row">
+                        <div class="contact-form__group">
+                            <label for="firstName" class="contact-form__label">First Name <span>*</span></label>
+                            <input type="text" id="firstName" name="firstName" class="contact-form__input" required>
+                        </div>
+                        <div class="contact-form__group">
+                            <label for="lastName" class="contact-form__label">Last Name <span>*</span></label>
+                            <input type="text" id="lastName" name="lastName" class="contact-form__input" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Contact Info -->
+                    <div class="contact-form__row">
+                        <div class="contact-form__group">
+                            <label for="email" class="contact-form__label">Email Address <span>*</span></label>
+                            <input type="email" id="email" name="email" class="contact-form__input" required>
+                        </div>
+                        <div class="contact-form__group">
+                            <label for="phone" class="contact-form__label">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="contact-form__input" >
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Street Address -->
+                    <div class="contact-form__group">
+                        <label for="street" class="contact-form__label">Street Address</label>
+                        <input type="text" id="street" name="street" class="contact-form__input">
+                    </div>
+
+                    <!-- Row 4: City & State -->
+                    <div class="contact-form__row">
+                        <div class="contact-form__group">
+                            <label for="city" class="contact-form__label">City</label>
+                            <input type="text" id="city" name="city" class="contact-form__input">
+                        </div>
+                        <div class="contact-form__group">
+                            <label for="state" class="contact-form__label">State / Province</label>
+                            <input type="text" id="state" name="state" class="contact-form__input">
+                        </div>
+                    </div>
+
+                    <!-- Row 5: ZIP Code -->
+                    <div class="contact-form__row">
+                        <div class="contact-form__group">
+                            <label for="zip" class="contact-form__label">ZIP / Postal Code</label>
+                            <input type="text" id="zip" name="zip" class="contact-form__input">
+                        </div>
+                        <!-- Empty div to keep the grid aligned since we removed the Country dropdown -->
+                        <div class="contact-form__group"></div>
+                    </div>
+
+                    <!-- Textarea -->
+                    <div class="contact-form__group">
+                        <div class="contact-form__label-wrapper">
+                            <label for="message" class="contact-form__label">How can we help you? Please provide a brief description of your job or question.</label>
+                            <span class="contact-form__char-count">0 / 180</span>
+                        </div>
+                        <textarea id="message" name="message" class="contact-form__input contact-form__textarea" rows="5" maxlength="180"></textarea>
+                    </div>
+
+                    <!-- SMS Consent Checkbox -->
+                    <div class="contact-form__checkbox-group">
+                        <input type="checkbox" id="smsConsent" name="smsConsent" class="contact-form__checkbox">
+                        <label for="smsConsent" class="contact-form__checkbox-label">
+                            *By checking this box, you agree to receive SMS messages from Grand Property Maintenance at the phone number provided. Consent isn't required to make a purchase. Reply STOP anytime to opt out. Message and data rates may apply. See our <a href="./privacy.html">privacy policy</a>.
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="contact-form__submit-wrapper">
+                        <button type="submit" class="btn btn--secondary btn--large">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+    </main>
+
+   <!-- Footer Section -->
+   <footer class="footer" id="footer">
+        <!-- Top Marquee -->
+        <div class="footer__marquee-wrapper">
+            <div class="footer__marquee">
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+            </div>
+            <!-- Duplicate for seamless CSS loop -->
+            <div class="footer__marquee" aria-hidden="true">
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+                <span>REACH OUT ANY TIME.</span>
+            </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="container footer__container">
+            <div class="footer__grid">
+
+                <!-- Column 1: Brand -->
+                <div class="footer__col footer__col--brand">
+                    <img src="./media/foot_logo.png" alt="Grand Property Maintenance Logo" loading="lazy" class="footer__logo">
+                    <p class="footer__desc">
+                        Your trusted partner in complete property care, delivering dependable results and lasting peace of mind.
+                    </p>
+                </div>
+
+                <!-- Column 2: Useful Links -->
+                <div class="footer__col">
+                    <h4 class="footer__heading">Useful Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Other Links -->
+                <div class="footer__col">
+                    <h4 class="footer__heading">Other Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Information -->
+                <div class="footer__col">
+                    <h4 class="footer__heading">Contact Us</h4>
+                    <ul class="footer__list footer__list--contact">
+                        <li>
+                            <a href="tel:xxxxxxxxxxx">
+                                <i class="ri-phone-fill"></i> xxxxxxxxxxx
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:email@gmail.com">
+                                <i class="ri-mail-fill"></i> email@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Copyright Bar -->
+            <div class="footer__bottom">
+                <p>&copy; 2026 Grand Property Maintenance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
