@@ -65,30 +65,108 @@ heroTl.to(".hero__bg", {
     duration: 0.8,
     ease: "back.out(1.7)"
 }, "-=0.4");
-}
-function choose(){
-const featureTl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".features",
-        start: "top 85%", 
+// 4. Parallax: image moves up slightly while the page scrolls
+gsap.fromTo(".hero__image",
+    { yPercent: 0 },
+    {
+        yPercent: 50, // 130% height × 23% ≈ the 30% extra, so no gaps show
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".hero__wrapper",
+            start: "top top",
+            end: "bottom top",
+            scrub: true
+        }
     }
-});
-featureTl.from(".features__title", {
-    y: 30,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out"
+);
+}
+function choose() {
+
+    const featureTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".features",
+            start: "top 85%",
+        }
+    });
+
+    // Title reveal
+    featureTl.from(".features__title", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+    });
+
+    // Cards reveal
+    featureTl.to(".feature-card", {
+        autoAlpha: 1,
+        scale: 1,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "back.out(1.2)",
+        clearProps: "transform"
+    }, "-=0.4");
+
+    // Start slider after cards have appeared
+    featureTl.call(() => {
+        startFeatureSlider();
+    });
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonialSwiper = new Swiper(".testimonials-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    speed: 550,
+    grabCursor: true,
+    navigation: {
+      nextEl: "#testiNext",
+      prevEl: "#testiPrev",
+    },
+  });
 });
 
-// 2. Animate cards TO visible state
-featureTl.to(".feature-card", {
-    autoAlpha: 1, // GSAP special property: handles both opacity and visibility
-    scale: 1,
-    duration: 0.8,
-    stagger: 0.15, 
-    ease: "back.out(1.2)",
-    clearProps: "transform" // Clears GSAP styles after animation so CSS hover works perfectly
-}, "-=0.4");
+function startFeatureSlider() {
+
+    const track = document.querySelector(".features__track");
+    const cards = [...track.querySelectorAll(".feature-card")];
+
+    if (!track || !cards.length) return;
+
+    // Duplicate the cards for a seamless infinite loop
+    cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.classList.add("feature-card-clone");
+        track.appendChild(clone);
+    });
+
+    const originalCardsWidth = cards.reduce((total, card) => {
+        return total + card.offsetWidth;
+    }, 0);
+
+    const gap = parseFloat(getComputedStyle(track).gap);
+
+    const loopDistance =
+        originalCardsWidth + (gap * cards.length);
+
+    // Slow continuous movement
+    const sliderAnimation = gsap.to(track, {
+        x: -loopDistance,
+        duration: 45,
+        ease: "none",
+        repeat: -1
+    });
+
+    // Pause when hovering over the slider
+    const slider = document.querySelector(".features__slider");
+
+    slider.addEventListener("mouseenter", () => {
+        sliderAnimation.pause();
+    });
+
+    slider.addEventListener("mouseleave", () => {
+        sliderAnimation.resume();
+    });
 }
 function stats(){
 const statsSection = document.querySelector(".stats");
