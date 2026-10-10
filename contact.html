@@ -77,7 +77,40 @@
                 <div class="contact-page__line"></div>
             </div>
 
-            <!-- Form Wrapper -->
+            <!-- Two Column Layout -->
+            <div class="contact-page__layout">
+
+                <!-- Left Column: Map + Details -->
+                <div class="contact-info">
+                    <div class="contact-info__map">
+                        <iframe
+                            src="https://www.google.com/maps?q=California,USA&output=embed"
+                            title="Map of California, USA"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <ul class="contact-info__list">
+                        <li>
+                            <a href="mailto:email@gmail.com">
+                                <i class="ri-mail-fill"></i> email@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:xxxxxxxxxxx">
+                                <i class="ri-phone-fill"></i> xxxxxxxxxxx
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank" rel="noopener">
+                                <i class="ri-instagram-line"></i> instagram.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Column: Form -->
             <div class="contact-form__wrapper">
                 <!-- Dummy Form (Ready for Formspree connection later) -->
                     <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
@@ -130,8 +163,6 @@
                             <label for="zip" class="contact-form__label">ZIP / Postal Code</label>
                             <input type="text" id="zip" name="zip" class="contact-form__input">
                         </div>
-                        <!-- Empty div to keep the grid aligned since we removed the Country dropdown -->
-                        <div class="contact-form__group"></div>
                     </div>
 
                     <!-- Textarea -->
@@ -158,6 +189,8 @@
 
                 </form>
             </div>
+            </div><!-- /.contact-page__layout -->
+
 
         </div>
     </section>
