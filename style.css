@@ -1315,7 +1315,7 @@ background: linear-gradient(
 
 /* --- Privacy Policy Page --- */
 .privacy-page {
-    padding: 4rem 0 6rem 0; /* Space for navbar */
+    padding: 14rem 0 6rem 0; /* Space for navbar */
     background-color: var(--bg-color);
     
     /* FOUC Protection */
@@ -1362,7 +1362,7 @@ background: linear-gradient(
 
 /* Content Blocks */
 .privacy-page__content {
-    background-color: #ffffff;
+    background-color: var(--card-color);
     padding: 4rem;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.03);
@@ -1439,7 +1439,7 @@ background: linear-gradient(
 }
 
 .about-page__container {
-    max-width: 1700px; 
+    max-width: 1600px; 
     margin: 0 auto;
     text-align: center;
 }
@@ -1544,6 +1544,7 @@ background: linear-gradient(
   opacity: 0.85;
   line-height: 1.85;
   margin: 0;
+  padding-right: 3rem;
   text-align: left;
 }
 
