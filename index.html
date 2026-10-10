@@ -64,29 +64,52 @@
     <!-- Main Content -->
     <main class="main">
         <!-- -------------- hero section ------------------ -->
-        <section class="hero" id="home">
-        <div class="container hero__outer-container">
-        <div class="hero__wrapper">
-            <div class="hero__bg">
-                <img src="./media/hero.jpg" alt="Professional property maintenance workspace" loading="lazy" class="hero__image">
-            </div>
 
-            <div class="hero__content">
-                <h1 class="hero__title">
-                    Your Trusted Partner in
-                    <span>Property Care</span>
-                </h1>
-                <p class="hero__description">
-                    From routine upkeep to urgent same-day repairs, we deliver smart,
-                    dependable solutions that keep your property running smoothly.
-                </p>
-                <div class="hero__actions">
-                    <a href="./contact.html" class="btn btn--primary btn--large">Request Quote</a>
+        <section class="hero" id="home">
+            <div class="container hero__outer-container">
+                <div class="hero__wrapper">
+                    <div class="hero__bg">
+                        <img
+                            src="./media/hero.jpg"
+                            alt="Professional property maintenance workspace"
+                            class="hero__image"
+                            fetchpriority="high"
+                        >
+                        <img
+                            src="./media/hero1.jpg"
+                            alt=""
+                            class="hero__image"
+                            loading="eager"
+                        >
+                        <img
+                            src="./media/hero2.jpg"
+                            alt=""
+                            class="hero__image"
+                            loading="eager"
+                        >
+                    </div>
+
+                    <div class="hero__content">
+                        <h1 class="hero__title">
+                            Your Trusted Partner in
+                            <span>Property Care</span>
+                        </h1>
+
+                        <p class="hero__description">
+                            From routine upkeep to urgent same-day repairs, we deliver smart,
+                            dependable solutions that keep your property running smoothly.
+                        </p>
+
+                        <div class="hero__actions">
+                            <a href="./contact.html" class="btn btn--primary btn--large">
+                                Request Quote
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
         </section>
+
         <!-- Services Slider Section -->
         <section class="services-slider section" id="services">
             <div class="container">
@@ -304,7 +327,7 @@
 
                 <!-- CTA Button -->
                 <div class="services-slider__cta">
-                    <a href="./services.html" class="btn btn--primary">Explore All Services</a>
+                    <a href="./services.html" class="btn btn--primary">Book a Services</a>
                 </div>
             </div>
         </section>
@@ -443,14 +466,12 @@
                 <div class="stats__grid">
                     <!-- Stat 1 -->
                     <div class="stat-item">
-                        <div class="stat-item__number" data-target="200" data-suffix="+">0+</div>
-                        <p class="stat-item__label">Satisfied Clients</p>
                     </div>
 
                     <!-- Stat 2 -->
                     <div class="stat-item">
-                        <div class="stat-item__number" data-target="4.9" data-type="decimal" data-suffix="/5.0">0.0/5.0</div>
-                        <p class="stat-item__label">Service Rating</p>
+                        <div class="stat-item__number" data-target="99.9" data-type="decimal" data-suffix="%">0%</div>
+                        <p class="stat-item__label">Satisfied Clients</p>
                     </div>
 
                     <!-- Stat 3 -->
@@ -461,59 +482,12 @@
 
                     <!-- Stat 4 -->
                     <div class="stat-item">
-                        <div class="stat-item__number" data-target="99" data-suffix="%">0%</div>
-                        <p class="stat-item__label">Trust Rate</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Scrolling Text Section -->
-        <section class="scrolling-text" id="ticker">
-            <div class="scrolling-text__container">
-                <!-- CSS Marquee Wrapper -->
-                <div class="marquee-track">
-                    <div class="marquee-content">
-                        <span> Dependable</span>
-                        <span> Care | </span>
-                        <span> Trusted</span>
-                        <span> Team  | </span>
-                        <span> Lasting</span>
-                        <span> Quality  | </span>
-                        <span> Skilled</span>
-                        <span> Craftsmanship  | </span>
-                        <span> Always</span>
-                        <span> Available   | </span>
-                    </div>
-                    <!-- Duplicate for seamless CSS loop -->
-                    <div class="marquee-content" aria-hidden="true">
-                        <span> Dependable</span>
-                        <span> Care | </span>
-                        <span> Trusted</span>
-                        <span> Team  | </span>
-                        <span> Lasting</span>
-                        <span> Quality  | </span>
-                        <span> Skilled</span>
-                        <span> Craftsmanship  | </span>
-                        <span> Always</span>
-                        <span> Available   | </span>
-                    </div>
-
-                    <!-- Duplicate for seamless CSS loop -->
-                    <div class="marquee-content" aria-hidden="true">
-                        <span> Dependable</span>
-                        <span> Care | </span>
-                        <span> Trusted</span>
-                        <span> Team  | </span>
-                        <span> Lasting</span>
-                        <span> Quality  | </span>
-                        <span> Skilled</span>
-                        <span> Craftsmanship  | </span>
-                        <span> Always</span>
-                        <span> Available   | </span>
-                    </div>
-                </div>
-            </div>
-        </section>
+         <hr>
         <!-- Testimonials Section -->
         <section class="testimonials section" id="testimonials">
             <div class="container testimonials__layout">
@@ -647,22 +621,41 @@
    <footer class="footer" id="footer">
         <!-- Top Marquee -->
         <div class="footer__marquee-wrapper">
-            <div class="footer__marquee">
-                <span>REACH OUT ANY TIME.</span>
-                <span>REACH OUT ANY TIME.</span>
-                <span>REACH OUT ANY TIME.</span>
-                <span>REACH OUT ANY TIME.</span>
-                <span>REACH OUT ANY TIME.</span>
-                <span>REACH OUT ANY TIME.</span>
-            </div>
-            <!-- Duplicate for seamless CSS loop -->
             <div class="footer__marquee" aria-hidden="true">
                 <span>REACH OUT ANY TIME.</span>
+                        <span> Dependable Care.</span>
                 <span>REACH OUT ANY TIME.</span>
+                        <span> Trusted Team.</span>
                 <span>REACH OUT ANY TIME.</span>
+                        <span> Lasting Qaulity.</span>
                 <span>REACH OUT ANY TIME.</span>
+                        <span> Skilled Craftsmanship.</span>
                 <span>REACH OUT ANY TIME.</span>
+                        <span> Always Available.</span>
+            </div>
+            <div class="footer__marquee" aria-hidden="true">
                 <span>REACH OUT ANY TIME.</span>
+                        <span> Dependable Care.</span>
+                <span>REACH OUT ANY TIME.</span>
+                        <span> Trusted Team.</span>
+                <span>REACH OUT ANY TIME.</span>
+                        <span> Lasting Qaulity.</span>
+                <span>REACH OUT ANY TIME.</span>
+                        <span> Skilled Craftsmanship.</span>
+                <span>REACH OUT ANY TIME.</span>
+                        <span> Always Available.</span>
+            </div>
+            <div class="footer__marquee" aria-hidden="true">
+                <span>REACH OUT ANY TIME.</span>
+                        <span> Dependable Care.</span>
+                <span>REACH OUT ANY TIME.</span>
+                        <span> Trusted Team.</span>
+                <span>REACH OUT ANY TIME.</span>
+                        <span> Lasting Qaulity.</span>
+                <span>REACH OUT ANY TIME.</span>
+                        <span> Skilled Craftsmanship.</span>
+                <span>REACH OUT ANY TIME.</span>
+                        <span> Always Available.</span>
             </div>
         </div>
 

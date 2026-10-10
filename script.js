@@ -33,53 +33,88 @@ function header(){
     });
 });
 }
-function hero (){
-const heroTl = gsap.timeline();
 
-// 1. Image fade animation
-heroTl.to(".hero__bg", {
-    opacity: 1,
-    duration: 1.5,
-    ease: "power2.inOut"
-})
+function hero() {
+    const images = gsap.utils.toArray(".hero__image");
 
-// 2. Heading and text fade
-.to(".hero__title", {
-    opacity: 1,
-    y: -20, // Subtle slide up
-    duration: 1,
-    ease: "power3.out"
-}, "-=0.5") // Slight overlap with image fade
+    if (!images.length) return;
 
-.to(".hero__description", {
-    opacity: 1,
-    y: -10,
-    duration: 0.8,
-    ease: "power3.out"
-}, "-=0.6")
+    // Keep only the first image visible initially.
+    gsap.set(images, { opacity: 0 });
+    gsap.set(images[0], { opacity: 1 });
 
-// 3. Button fades with scaling
-.to(".hero__actions", {
-    opacity: 1,
-    scale: 1,
-    duration: 0.8,
-    ease: "back.out(1.7)"
-}, "-=0.4");
-// 4. Parallax: image moves up slightly while the page scrolls
-gsap.fromTo(".hero__image",
-    { yPercent: 0 },
-    {
-        yPercent: 50, // 130% height × 23% ≈ the 30% extra, so no gaps show
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".hero__wrapper",
-            start: "top top",
-            end: "bottom top",
-            scrub: true
+    // Hero entrance animations.
+    const heroTl = gsap.timeline();
+
+    heroTl.to(".hero__bg", {
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.inOut"
+    })
+
+    .to(".hero__title", {
+        opacity: 1,
+        y: -20,
+        duration: 1,
+        ease: "power3.out"
+    }, "-=0.5")
+
+    .to(".hero__description", {
+        opacity: 1,
+        y: -10,
+        duration: 0.8,
+        ease: "power3.out"
+    }, "-=0.6")
+
+    .to(".hero__actions", {
+        opacity: 1,
+        scale: 1,
+        duration: 0.8,
+        ease: "back.out(1.7)"
+    }, "-=0.4");
+
+    // Continuous image crossfade slideshow.
+    const slideshowTl = gsap.timeline({
+        repeat: -1,
+        paused: true
+    });
+
+    images.forEach((image, index) => {
+        const nextImage = images[(index + 1) % images.length];
+
+        slideshowTl
+            .to(nextImage, {
+                opacity: 1,
+                duration: 1.5,
+                ease: "power2.inOut"
+            }, "+=1")
+
+            .to(image, {
+                opacity: 0,
+                duration: 1.5,
+                ease: "power2.inOut"
+            }, "<");
+    });
+
+    // Start slideshow after the entrance animation.
+    heroTl.add(() => slideshowTl.play());
+
+    // Preserve the existing scroll parallax effect.
+    gsap.fromTo(images,
+        { yPercent: 0 },
+        {
+            yPercent: 50,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".hero__wrapper",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
         }
-    }
-);
+    );
 }
+
 function choose() {
 
     const featureTl = gsap.timeline({
