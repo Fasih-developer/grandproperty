@@ -1293,11 +1293,11 @@ background: linear-gradient(
 
 /* Adjust secondary button color to match your image */
 .btn--secondary {
-    background-color: var(--secondary-color); /* Usually dark blue in your palette */
+    background-image: linear-gradient(to right, var(--secondary-color), var(--accent-hover));
     color: #fff;
     padding: 14px 40px;
     border: none;
-    border-radius: 6px;
+    border-radius: 25px;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
