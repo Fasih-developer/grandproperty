@@ -1,11 +1,35 @@
-/* --- Mobile Adjustments --- */
-.header__container {
-    height: 70px;
+/* --- Global Mobile Container --- */
+.container {
+    padding: 0 1.25rem;
 }
 
-.header__nav, 
+.section {
+    padding: 4rem 0;
+}
+
+/* --- Header Mobile Adjustments --- */
+.header {
+    padding: 0.5rem 4vw;
+}
+
+.header__container {
+    height: 70px;
+    padding: 0;
+}
+
+.header__logo img {
+    height: 42px;
+}
+
+.header__nav,
 .header__cta {
     display: none;
+}
+
+.action__phone {
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
 }
 
 .nav__toggle {
@@ -20,6 +44,7 @@
 .header__mobile-menu {
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-color);
 }
 
 .menu__close {
@@ -30,6 +55,7 @@
     border: none;
     font-size: 2.2rem;
     color: var(--secondary-color);
+    cursor: pointer;
 }
 
 .mobile-nav__list {
@@ -44,59 +70,92 @@
     font-weight: 700;
     color: var(--primary-text);
 }
+
 /* --- Hero Mobile --- */
 .hero {
-    padding: 1rem 0;
+    padding: 0;
+}
+
+.hero__outer-container {
+    padding: 0;
 }
 
 .hero__wrapper {
-    height: 70vh;
+    height: 75vh;
     min-height: 500px;
+    border-radius: 0;
 }
 
 .hero__content {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
     text-align: center;
 }
 
 .hero__title {
     font-size: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.2rem;
 }
 
 .hero__description {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    max-width: 100%;
+    padding: 0;
     margin-bottom: 2rem;
+    line-height: 1.5;
 }
 
 .hero__actions {
     width: 100%;
 }
-/* --- Features Mobile --- */
+
+/* --- Features / Why Choose Us Mobile --- */
+.features {
+    padding: 3.5rem 0;
+}
+
 .features__title {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 2.5rem;
 }
 
-.features__grid {
-    grid-template-columns: repeat(1, 1fr);
+.features__slider {
+    padding: 1.5rem 0 2.5rem;
+}
+
+.features__track {
     gap: 1rem;
 }
 
 .feature-card {
-    padding: 2rem 1rem;
+    flex: 0 0 190px;
+    width: 190px;
+    height: 190px;
+    padding: 2rem;
+}
+
+.feature-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .feature-card__title {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
-.feature-card__text {
-    font-size: 0.85rem;
-}
 /* --- Stats Mobile --- */
+.stats {
+    padding: 0 0 3.5rem 0;
+}
+
 .stats__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 1rem;
+    gap: 2.5rem 1rem;
+}
+
+.stat-item:empty {
+    display: none;
 }
 
 .stat-item__number {
@@ -106,9 +165,10 @@
 .stat-item__label {
     font-size: 0.85rem;
 }
+
 /* --- Scrolling Text Mobile --- */
 .scrolling-text {
-    padding: 1.5rem 0;
+    padding: 1.25rem 0;
 }
 
 .marquee-content span {
@@ -117,190 +177,293 @@
 }
 
 .marquee-track {
-    animation-duration: 20s; /* Slightly faster on mobile */
+    animation-duration: 20s;
 }
 
-/* --- Services Slider Mobile Fixes --- */
-    .services-slider {
-        padding: 4rem 0;
-    }
+/* --- Services Slider Mobile --- */
+.services-slider {
+    padding: 4rem 0;
+}
 
-    .section-header__title {
-        font-size: 2.2rem;
-    }
+.section-header {
+    margin-bottom: 2.5rem;
+}
 
-    .section-header {
-        margin-bottom: 2.5rem;
-    }
+.section-header__title {
+    font-size: 2.2rem;
+}
 
-    .services-slider__cta {
-        margin-top: 2.5rem;
-    }
+.services-wrapper {
+    padding: 0;
+}
 
-    .services-wrapper {
-        padding: 0; /* Remove lateral padding since arrows are hidden */
-    }
+.services-wrapper .swiper-button-next,
+.services-wrapper .swiper-button-prev {
+    display: none;
+}
 
-    .services-wrapper .swiper-button-next,
-    .services-wrapper .swiper-button-prev {
-        display: none; /* Hide arrows, rely on touch swipe */
-    }
+.service-card__content {
+    padding: 1.5rem 1.25rem;
+}
 
-    .service-card__content {
-        padding: 1.5rem 1rem;
-    }
+.service-card__title {
+    font-size: 1.15rem;
+}
 
-    .service-card__title {
-        font-size: 1.2rem;
-    }
+.services-slider__cta {
+    margin-top: 2.5rem;
+}
+
 /* --- Testimonials Mobile --- */
-    .testimonials {
-        padding: 4rem 0;
-    }
+.testimonials {
+    padding: 4rem 0;
+}
 
-    .testimonials__title {
-        font-size: 2.2rem;
-    }
+.testimonials__layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
 
-    .testimonials__desc {
-        font-size: 0.95rem;
-    }
+.testimonials__header {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+}
 
-    .testimonials__header {
-        margin-bottom: 2.5rem;
-    }
+.testimonials__title {
+    font-size: 2.2rem;
+}
 
-    .testimonial-card {
-        padding: 2rem 1.5rem;
-    }
+.testimonials__desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
 
-    /* Swiper Fade adjustments */
-    .testimonials-swiper {
-        padding-bottom: 1rem;
-    }
+.testimonials__slider-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.testimonials__arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.25rem;
+}
+
+.testimonials__arrow--prev {
+    left: 8px;
+}
+
+.testimonials__arrow--next {
+    right: 8px;
+}
+
+.testimonial-card {
+    padding: 2rem 1.5rem;
+}
+
+.testimonials-swiper {
+    padding-bottom: 1rem;
+}
+
 /* --- Footer Mobile --- */
-    .footer__container {
-        padding-top: 4rem;
-    }
+.footer__container {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
 
-    .footer__grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: center; 
-    }
+.footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+    padding: 0 1.25rem;
+    margin-bottom: 3rem;
+}
 
-    .footer__logo {
-        margin: 0 auto 1.5rem auto; 
-    }
+.footer__logo {
+    margin: 0 auto 1.5rem auto;
+}
 
-    .footer__heading::after {
-        left: 50%;
-        transform: translateX(-50%); 
-    }
+.footer__desc {
+    padding-right: 0;
+}
 
-    .footer__list {
-        align-items: center; 
-    }
+.footer__heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-    .footer__list a, 
-    .footer__location {
-        justify-content: center; 
-        text-align: center;
-    }
+.footer__list {
+    align-items: center;
+}
 
-    /* --- Services Page Mobile --- */
+.footer__list a,
+.footer__location {
+    justify-content: center;
+    text-align: center;
+}
 
+.footer__bottom {
+    padding: 1.5rem 1.25rem 0 1.25rem;
+}
 
-    .services-page {
-        padding: 6rem 0 4rem 0;
-    }
+/* --- Services Page Mobile --- */
+.services-page {
+    padding: 7.5rem 0 4rem 0;
+}
 
-    .services-page__title {
-        font-size: 2.5rem;
-    }
+.services-page__header {
+    margin-bottom: 2.5rem;
+}
 
-    .services-page__desc {
-        font-size: 1rem;
-    }
+.services-page__title {
+    font-size: 2.4rem;
+}
 
-    .services-page__grid {
-        grid-template-columns: 1fr; /* 1 card on mobile */
-        gap: 2rem;
-    }
+.services-page__desc {
+    font-size: 1rem;
+}
 
+.services-page__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
 
+/* --- Contact Page Mobile --- */
+.contact-page {
+    padding: 7.5rem 0 4rem 0;
+}
 
-    /* --- Contact Page Mobile --- */
-    .contact-page {
-        padding: 6rem 0 4rem 0;
-    }
+.contact-page__title {
+    font-size: 2.4rem;
+}
 
-    .contact-page__title {
-        font-size: 2.5rem;
-    }
+.contact-page__desc {
+    font-size: 1rem;
+}
 
-    .contact-form__wrapper {
-        padding: 2rem 1.5rem; /* Less padding on mobile */
-    }
+.contact-page__layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
 
-    /* Stack grid rows on top of each other */
-    .contact-form__row {
-        grid-template-columns: 1fr;
-        gap: 1.5rem; /* Keeps spacing consistent when stacked */
-    }
+.contact-info__map {
+    height: 280px;
+}
 
-    /* Hide the empty div we used for the zip code row */
-    .contact-form__row .contact-form__group:empty {
-        display: none;
-    }
+.contact-info__list {
+    padding-left: 0;
+    align-items: center;
+}
 
+.contact-form__wrapper {
+    padding: 2rem 1.25rem;
+}
 
+.contact-form__row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
 
-    /* --- Privacy Policy Mobile --- */
-    .privacy-page {
-        padding: 6rem 0 4rem 0;
-    }
+.contact-form__row .contact-form__group:empty {
+    display: none;
+}
 
-    .privacy-page__title {
-        font-size: 2.5rem;
-    }
+.contact-form__label-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+}
 
-    .privacy-page__content {
-        padding: 2rem 1.5rem; /* Less padding on mobile */
-    }
+/* --- Privacy Policy Mobile --- */
+.privacy-page {
+    padding: 7.5rem 0 4rem 0;
+}
 
-    .privacy-block h2 {
-        font-size: 1.15rem;
-    }
+.privacy-page__header {
+    margin-bottom: 2.5rem;
+}
 
-    .privacy-block p, 
-    .privacy-block li {
-        font-size: 0.95rem;
-    }
+.privacy-page__title {
+    font-size: 2.4rem;
+}
 
-    .privacy-block--legal {
-        padding: 1.5rem;
-    }
+.privacy-page__content {
+    padding: 2rem 1.25rem;
+}
 
+.privacy-block h2 {
+    font-size: 1.15rem;
+}
 
+.privacy-block p,
+.privacy-block li {
+    font-size: 0.95rem;
+}
 
+.privacy-block--legal {
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
 
-    .about-page { padding: 6rem 0 4rem 0; }
-    .about-page__header { margin-bottom: 2.5rem; }
-    .about-page__top-title { font-size: 2.5rem; }
-    .about-page__content { margin-bottom: 3rem; }
-    .about-page__intro { font-size: 1.05rem; margin-bottom: 2.5rem; }
-    .about-page__title { font-size: 2.1rem; margin-bottom: 1.5rem; }
-    .about-page__desc { font-size: 1rem; }
-    .about-page__image-wrapper, .about-page__image { border-radius: 12px; }
+/* --- About Us Page Mobile --- */
+.about-page {
+    padding: 7.5rem 0 2rem 0;
+}
 
+.about-page__header {
+    margin-bottom: 2rem;
+}
 
+.about-page__top-title {
+    font-size: 2.4rem;
+}
 
+.about-page__content {
+    margin-bottom: 2.5rem;
+    padding: 0;
+}
 
+.about-page__intro {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0 auto 2.5rem auto;
+}
 
+.about-page__split {
+    flex-direction: column;
+    gap: 2rem;
+}
 
+.about-page__image-wrapper,
+.about-page__image {
+    border-radius: 12px;
+}
 
-    /* --- Coming Soon (Portfolio placeholder) Mobile --- */
-    .coming-soon { padding: 6rem 0 4rem 0; }
-    .coming-soon__title { font-size: 2.2rem; }
-    .coming-soon__desc { font-size: 1rem; }
+.about-page__title {
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.about-page__desc {
+    font-size: 0.95rem;
+    padding-right: 0;
+    text-align: center;
+    line-height: 1.75;
+}
+
+/* --- Coming Soon (Portfolio Placeholder) Mobile --- */
+.coming-soon {
+    padding: 8rem 0 4rem 0;
+}
+
+.coming-soon__title {
+    font-size: 2.2rem;
+}
+
+.coming-soon__desc {
+    font-size: 1rem;
+}
