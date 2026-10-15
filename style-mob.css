@@ -467,3 +467,8 @@
 .coming-soon__desc {
     font-size: 1rem;
 }
+
+
+.stat_item_one{
+    display: none;
+}
